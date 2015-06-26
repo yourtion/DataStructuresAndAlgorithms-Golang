@@ -1,0 +1,19 @@
+#!/bin/bash
+path=$(pwd)
+export GOPATH=$path
+
+go build algorithm/qsort
+go build algorithm/bubblesort
+go build algorithm/insertionsort
+go build algorithm/selectionsort
+go build algorithm/shellsort
+
+go test algorithm/qsort
+go test algorithm/bubblesort
+go test algorithm/insertionsort
+go test algorithm/selectionsort
+go test algorithm/shellsort
+
+cd bin
+go build sorter
+

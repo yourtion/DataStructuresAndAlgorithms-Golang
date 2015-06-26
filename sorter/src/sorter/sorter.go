@@ -16,6 +16,7 @@ import "algorithm/bubblesort"
 import "algorithm/qsort"
 import "algorithm/selectionsort"
 import "algorithm/insertionsort"
+import "algorithm/shellsort"
 
 var infile *string = flag.String("i", "unsorted.dat", "File contains values for sorting")
 var outfile *string = flag.String("o", "sorted.dat", "File to receive sorted values")
@@ -98,6 +99,8 @@ func main() {
 			insertionsort.InsertionSort(values)
 		case "selectionsort":
 			selectionsort.SelectionSort(values)
+		case "shellsort":
+			shellsort.ShellSort(values)
 		default:
 			fmt.Println("Sorting algorithm", *algorithm, "is either unknown or unsupported.")
 		}
